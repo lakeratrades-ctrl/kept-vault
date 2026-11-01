@@ -1,0 +1,6 @@
+# Your vault password. You type this into Kept to open your journal. Use 8+ characters.
+VAULT_PASSWORD=
+# Optional. Your Databento API key (starts with db-). Turns on trade replay. Type none to skip.
+DATABENTO_KEY=none
+# Optional. Your Anthropic API key (starts with sk-ant-). Turns on AI review. Type none to skip.
+ANTHROPIC_KEY=none
