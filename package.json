@@ -1,0 +1,37 @@
+{
+  "name": "kept-vault",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Your private Kept vault: your trading journal, keys and replay data, in your own Cloudflare account.",
+  "scripts": {
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.40.0"
+  },
+  "cloudflare": {
+    "label": "Kept Vault",
+    "products": [
+      "Workers",
+      "D1"
+    ],
+    "bindings": {
+      "DB": {
+        "description": "Your private journal database. Cloudflare creates it for you."
+      },
+      "VAULT_PASSWORD": {
+        "description": "Make up a password (8+ characters). You'll type it into Kept to open your journal. Save it somewhere safe."
+      },
+      "DATABENTO_KEY": {
+        "description": "Optional. Your Databento API key (starts with db-) for trade replay. Type none to skip. You can add it later."
+      },
+      "ANTHROPIC_KEY": {
+        "description": "Optional. Your Anthropic API key (starts with sk-ant-) for AI review. Type none to skip. You can add it later."
+      },
+      "APP_ORIGINS": {
+        "description": "The Kept website allowed to open your vault. Leave this as it is."
+      }
+    }
+  }
+}
